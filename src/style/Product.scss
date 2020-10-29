@@ -76,6 +76,7 @@
   &:hover {
     text-decoration: underline;
 
+<<<<<<< HEAD
     // &:before {
     //   content: "Yes now";
     //   position: absolute;
@@ -106,6 +107,27 @@
   font-weight: bold;
 }
 
+=======
+    &:before {
+      content: "Yes now";
+      position: absolute;
+      top: -10px;
+      left: 60%;
+      white-space: nowrap;
+      font-family: "times new roman", times, serif;
+      font-weight: normal;
+      font-style: italic;
+      mix-blend-mode: difference;
+      text-transform: lowercase;
+      text-decoration: overline;
+      color: #00efff;
+      font-size: 2em;
+      animation: blink 6s steps(4, end) infinite alternate-reverse;
+    }
+  }
+}
+
+>>>>>>> c25fc1b64b4864d17aec7d04eea9d7c376e209cb
 @keyframes cross-1 {
   $steps: 5;
 
@@ -128,6 +150,7 @@
   }
 }
 
+<<<<<<< HEAD
 // @keyframes blink {
 //   $steps: 20;
 
@@ -141,3 +164,18 @@
 //     }
 //   }
 // }
+=======
+@keyframes blink {
+  $steps: 20;
+
+  @for $i from 0 through $steps {
+    #{percentage($i * (1 / $steps) + ((15 - random(30)) / 15) * (1 / $steps))} {
+      @if ($i % 3 == 0) {
+        opacity: 1;
+      } @else {
+        opacity: 0;
+      }
+    }
+  }
+}
+>>>>>>> c25fc1b64b4864d17aec7d04eea9d7c376e209cb
